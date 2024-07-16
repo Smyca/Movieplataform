@@ -1,0 +1,39 @@
+# ---------------- PELICULAS ---------------- #
+/// ---------------- APPS ----------------///
+1. Menu
+2. Formulario de Ingreso de Peliculas (Para registrar peliculas nuevas en el sistema)
+3. Listado de Peliculas (Para visualizar todas las peliculas de el sistema)
+4. Inicio sesion
+5. Formualario de Creacion de Usuarios
+
+/// ------------ Tablas ------------ ///
+1. Usuarios
+    - login (PK no se debe repetir)
+    - password
+    - name
+    - email
+2. Cartuchera (Caratula de la pelicula o serie)
+    - id_cartuchera
+    - titulo
+    - categoria (terror, accion, comedia)
+    - tipo (serie, pelicula)
+    - estado (activo, inactivo)
+3. Multimedia
+    - id_multimedia
+    - id_cartuchera
+    - titulo
+    - episodio
+    - temporada
+    - url
+    - estado (inactivo, Activo)
+4. Favoritos
+    - id_favorito
+    - id_cartuchera
+    - id_usuario
+    - estado (activo,  inactivo)
+5. Grupos
+    - id_grupo
+    - name (admin, pago, invitado)
+6. Grupo_Usuario
+    - login
+    - id_grupo
