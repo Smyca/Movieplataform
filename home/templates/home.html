@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
+
 <body>
-    Home Movies
-    
+    {% if user.is_authenticated %}
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="button" class="btn btn-success">logout</button>
+    </form>
+    {%else%}
+    <a href="{%url 'login'%}">Iniciar sesion</a>
+    {%endif%}
+
+    <h1>
+        Home Movies
+    </h1>
+
+
+
+
+
 </body>
+
 </html>

@@ -1,0 +1,31 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeLogin</title>
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+        <h1>Bienvenido {{user.username}}</h1>
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">logout</button>
+        </form>
+
+    {%else%}
+    <a href="{%url 'login'%}">Iniciar sesion</a>
+
+
+    {%endif%}
+
+    <h3>Home Movies</h3>
+
+</body>
+
+</html>
+
+{% endblock %}

@@ -20,3 +20,9 @@ class sec_user_group(models.Model):
     grupo_id    = models.ForeignKey(sec_group, on_delete=models.CASCADE)
     def __str__(self):
         return self.login +  self.grupo_id.name
+    
+class login_user(models.Model):
+    user = models.CharField(max_length=50,verbose_name='Usuario')
+    password= models.CharField(max_length=20)
+    def __str__(self):
+        return self.user
