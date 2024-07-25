@@ -9,12 +9,21 @@
 
 <body>
     {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}"></a>
     <form method="post" action="{% url 'logout' %}">
         {% csrf_token %}
-        <button type="button" class="btn btn-success">logout</button>
+        <button type="submit" >logout</button>
     </form>
     {%else%}
-    <a href="{%url 'login'%}">Iniciar sesion</a>
+    <div>
+        <a href="{%url 'login'%}">Iniciar sesion</a>
+    </div>
+    <br>
+    <div>
+        <a href="{%url 'registro'%}">Registrarse</a>
+
+    </div>
+
     {%endif%}
 
     <h1>
