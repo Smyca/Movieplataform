@@ -12,9 +12,10 @@ def test(request):
     return HttpResponse("<h1>Test Page</h1>")
 
 def create_user(request):
+
+    
     if request.method == "GET":
         print("Ingreso GET")
-
         form=registerForm()
         return render(request,'registration/registrarse.html',{'form':form})
     
