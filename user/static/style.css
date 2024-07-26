@@ -7,7 +7,9 @@
     position: relative;
     color: white;
 }
-
+#submit{
+    display: none;
+}
 
 
 #hero{
