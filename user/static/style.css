@@ -6,19 +6,23 @@
     z-index: 2;
     position: relative;
     color: white;
+    
 }
-#submit{
-    display: none;
+.a{
+    text-decoration: none;
 }
 
-
-#hero{
-/* 
-    min-height: 100vh;
-    position: relative; */
-
-
+.li{
+    color: white !important;
 }
+
+.titulo{
+    margin-top:10%;
+}
+form{
+    margin-top: 100px;
+}
+
 
 video{
 

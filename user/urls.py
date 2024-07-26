@@ -8,11 +8,12 @@ from .forms import *
 
 
 urlpatterns = [
-    path('', views.test),
-    path('test/', views.test),
+   
+    path('change_pass/', views.olvide_pass,name='forget_pass'),
     path('registro/', views.create_user,name='registro'),
     path('login/',auth_views.LoginView.as_view(authentication_form=userForm),name='login'),
     path('logout/',auth_views.LogoutView.as_view(),name='logout'),
+    
     
     
    

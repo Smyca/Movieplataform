@@ -27,6 +27,18 @@
                     <div class="col-6 mx-auto">
                         <h6 class="mt-3"> {{field.label_tag}}</h6>
                         {% render_field field%}
+
+                        {% if field.name == "password2" %}
+                        <div class="mt-2">
+                            <small>la contraseña debe contener : </small>
+                            <div class="mt-3">
+
+                                <li class="form-text text-muted li">Mas de 8 caracteres</li>
+                                <li class="form-text text-muted li">Un numero y al menos un simbolo</li>
+                            </div>
+                        </div>
+
+                        {% endif %}
                     </div>
 
 
@@ -35,11 +47,8 @@
 
                     <div class="d-grid w-50 mx-auto mt-3">
                         <button type="submit" id="submit" class="btn btn-success mb-2 mt-4"
-                            value="Register">Registrarse</button>
-                        <button class="btn btn-success mb-2 mt-4" 
-                                onclick="Valida2daContrasena()" 
-                                value="Register">Registrarse</button>
-                        <a class="btn btn-success mb-2" href="{%url 'home'%}">Volver</a>
+                            onclick="Valida2daContrasena()" value="Register">Registrarse</button>
+                        <a class="btn btn-success mb-2" href="{%url 'login'%}">Volver</a>
                     </div>
 
                 </form>

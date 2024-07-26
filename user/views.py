@@ -8,8 +8,12 @@ from django.contrib.auth import authenticate,login
 
 # Create your views here.
 
-def test(request):
-    return HttpResponse("<h1>Test Page</h1>")
+def olvide_pass(request):
+    if request.method == "GET":
+        print("Ingreso GET")
+        form=registerForm()
+        
+        return render(request,'registration/forget_pass.html',{'form':form})
 
 def create_user(request):
 
