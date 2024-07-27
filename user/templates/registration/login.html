@@ -29,15 +29,15 @@
                     {%endfor%}
                     <div class="olvidar">
                         <label for="#">
-                            <input type="checkbox"> Recordar
-                            <a href="{%url 'forget_pass'%}">Olvidé la contraseña</a>
+                            <!-- <input type="checkbox"> Recordar -->
+                            <a href="{%url 'forget_pass'%}">¿Olvidaste tu contraseña?</a>
                         </label>
                     </div>
-                    <button type="submit">Acceder</button>
+                    <button type="submit">Iniciar Sesión</button>
                 </form>
                 <div>
                     <div class="registrar">
-                        <p>No tengo una Cuenta <a href="{% url 'registro' %}"> Crear una</a></p>
+                        <p>¿No tienes una cuenta? <a href="{% url 'registro' %}"> Registrate</a></p>
                     </div>
                 </div>
             </div>

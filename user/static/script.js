@@ -1,16 +1,26 @@
 document.addEventListener('DOMContentLoaded',()=>{
     console.log('Documento cargado');
-
+    // Usuario
     var userContainer       = document.querySelector('div.input-contenedor input[type="text"]').parentElement;
     var UserIcon            = document.createElement('i');    
     UserIcon.className      = 'fa-solid fa-user';
     userContainer.insertBefore(UserIcon, userContainer.querySelector('input'));
-
+    // Email
+    var EmailContainer       = document.querySelector('div.input-contenedor input[type="email"]').parentElement;
+    var EmailIcon            = document.createElement('i');    
+    EmailIcon.className      = 'fa-solid fa-envelope';
+    EmailContainer.insertBefore(EmailIcon, EmailContainer.querySelector('input'));
+    // Contraseña
     var passwordContainer   = document.querySelector('div.input-contenedor input[type="password"]').parentElement;
     var PassIcon            = document.createElement('i');
     PassIcon.className      = 'fa-solid fa-lock';
     passwordContainer.insertBefore(PassIcon, passwordContainer.querySelector('input'));
-
+    // Confirmar contraseña
+    var passwordContainer   = document.querySelector('div.input-contenedor input[name="password2"]').parentElement;
+    var PassIcon            = document.createElement('i');
+    PassIcon.className      = 'fa-solid fa-lock';
+    passwordContainer.insertBefore(PassIcon, passwordContainer.querySelector('input'));
+    // console.log('Aprobado');
 })
 
 // function Valida2daContrasena(){
